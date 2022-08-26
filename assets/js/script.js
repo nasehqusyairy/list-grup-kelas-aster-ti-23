@@ -8,10 +8,11 @@ fetch('assets/json/data_matkul.json').then((response) => {
 // fungsi untuk membuat section
 function create_sections(data) {
   const main = document.querySelector('main') //kontrol elemen main dari DOM
+  const progressbar = document.querySelector('.progress-bar') //kontrol elemen .progress-bar dari DOM
   let section = '' //variabel string untuk menampung template literal untuk masing-masing section
 
   // looping array data
-  data.forEach((el) => {
+  data.forEach((el, i) => {
     let { matkul } = el
 
     //variabel string untuk menampung template literal untuk masing-masing card berisi informasi kelas
@@ -42,20 +43,34 @@ function create_sections(data) {
    </div>
  </section>
    `
+    // animasi loading
+    progressbar.style.width = ((i + 1) / data.length * 100) + '%'
+
   })
 
   // mengisi elemen main
   main.innerHTML = section
 
-  // Ambil data dari file links.json kemudian distribusikan link whatsapp
-  fetch('assets/json/links.json').then((response) => {
-    return response.json().then((data) => {
-      // distribusi link whatsapp
-      document.querySelectorAll('.join-grup').forEach((e, i) => {
-        e.attributes.href.value = 'https://chat.whatsapp.com/' + data[i]
+  setTimeout(() => {
+    // Ambil data dari file links.json kemudian distribusikan link whatsapp
+    fetch('assets/json/links.json').then((response) => {
+      return response.json().then((data) => {
+        // distribusi link whatsapp
+        document.querySelectorAll('.join-grup').forEach((e, i) => {
+          e.attributes.href.value = 'https://chat.whatsapp.com/' + data[i]
+        })
+
+        // menghilangkan splash screen
+        const splash = document.querySelector('.splash')
+        splash.style.opacity = '0'
+        setTimeout(() => {
+          splash.style.display = 'none'
+          document.body.style.overflow = 'auto'
+        }, 1000);
+
       })
-    })
-  });
+    });
+  }, 1000);
 
   // melengkapi link navigasi pada navbar
   const nav = document.querySelector('.navbar .navbar-nav') //kontrol elemen div.navbar-nav dari DOM

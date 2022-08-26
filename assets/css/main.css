@@ -11869,6 +11869,7 @@ body {
   background: #b87ab9;
   background: -webkit-gradient(linear, left top, right top, color-stop(25%, #b87ab9), to(#c79564));
   background: linear-gradient(90deg, #b87ab9 25%, #c79564 100%);
+  overflow: hidden;
 }
 
 main {
@@ -11901,5 +11902,31 @@ footer svg path {
   background: #b87ab9;
   background: -webkit-gradient(linear, left top, right top, color-stop(25%, #b87ab9), to(#c79564));
   background: linear-gradient(90deg, #b87ab9 25%, #c79564 100%);
+}
+
+.splash {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #b87ab9;
+}
+
+.splash img {
+  max-width: 150px;
+}
+
+.splash .progress-bar {
+  width: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=main.css.map */
