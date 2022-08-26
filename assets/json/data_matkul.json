@@ -1,0 +1,126 @@
+[
+  {
+    "matkul": "Basis Data",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ]
+  },
+  {
+    "matkul": "Sistem Komputer",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  {
+    "matkul": "Metode Numerik",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  {
+    "matkul": "Struktur Data",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ]
+  },
+  {
+    "matkul": "Studi Fiqih",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  {
+    "matkul": "Bahasa Inggris I",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  {
+    "matkul": "Studi Al-Qur'an & Hadist",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  {
+    "matkul": "Praktikum Sistem Komputer",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ]
+  },
+  {
+    "matkul": "Praktikum Basis Data",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ]
+  },
+  {
+    "matkul": "Praktikum Struktur Data",
+    "kelas": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ]
+  }
+]
