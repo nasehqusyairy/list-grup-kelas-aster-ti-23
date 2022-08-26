@@ -1,9 +1,11 @@
+const preloadState = document.querySelector('.splash p') //kontrol elemen p pada splash screen dari DOM
+
 // Ambil data dari file data_matkul.json kemudian jalankan fungsi create_sections()
 fetch('assets/json/data_matkul.json').then((response) => {
   return response.json().then((data) => {
     create_sections(data)
   })
-});
+}).catch((reason) => { preloadState.innerHTML = "Terjadi kesalahan : " + reason.message }) //error handling
 
 // fungsi untuk membuat section
 function create_sections(data) {
@@ -69,7 +71,7 @@ function create_sections(data) {
         }, 1000); //timeout untuk menyamakan timing animasi
 
       })
-    });
+    }).catch((reason) => { preloadState.innerHTML = "Terjadi kesalahan : " + reason }) //error handling;
   }, 1000); //timeout untuk menyamakan timing animasi
 
   // melengkapi link navigasi pada navbar
