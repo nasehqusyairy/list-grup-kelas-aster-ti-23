@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+$theme-colors: (
+  "primary": #b87ab9
+);
+@import "../vendors/bootstrap5/scss/bootstrap";
+
+* {
+  font-family: 'Poppins';
+  color: $dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background: rgb(184, 122, 185);
+  background: linear-gradient(90deg, rgba(184, 122, 185, 1) 25%, rgba(199, 149, 100, 1) 100%);
+}
+
+main {
+  padding: 100px 0;
+  min-height: 100vh;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+footer {
+  padding: 1rem 0;
+
+  svg {
+    display: inline-block;
+    height: 15px;
+
+    path {
+      fill: red;
+    }
+  }
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  background: rgb(184, 122, 185);
+  background: linear-gradient(90deg, rgba(184, 122, 185, 1) 25%, rgba(199, 149, 100, 1) 100%);
+}
