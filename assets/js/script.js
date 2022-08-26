@@ -66,11 +66,11 @@ function create_sections(data) {
         setTimeout(() => {
           splash.style.display = 'none'
           document.body.style.overflow = 'auto'
-        }, 1000);
+        }, 1000); //timeout untuk menyamakan timing animasi
 
       })
     });
-  }, 1000);
+  }, 1000); //timeout untuk menyamakan timing animasi
 
   // melengkapi link navigasi pada navbar
   const nav = document.querySelector('.navbar .navbar-nav') //kontrol elemen div.navbar-nav dari DOM
