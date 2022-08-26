@@ -13,10 +13,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+.navbar,
+.splash {
+  background: linear-gradient(90deg, rgba(184, 122, 185, 1) 25%, rgba(199, 149, 100, 1) 100%);
+}
+
 body {
   position: relative;
-  background: rgb(184, 122, 185);
-  // background: linear-gradient(90deg, rgba(184, 122, 185, 1) 25%, rgba(199, 149, 100, 1) 100%);
   overflow: hidden;
 }
 

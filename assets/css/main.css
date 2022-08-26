@@ -11864,9 +11864,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+.navbar,
+.splash {
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #b87ab9), to(#c79564));
+  background: linear-gradient(90deg, #b87ab9 25%, #c79564 100%);
+}
+
 body {
   position: relative;
-  background: #b87ab9;
   overflow: hidden;
 }
 
