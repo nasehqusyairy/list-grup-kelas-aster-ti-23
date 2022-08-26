@@ -49,15 +49,11 @@ let section = '' //variabel string untuk menampung template literal untuk masing
 
 // looping array data
 data.forEach((el) => {
-  let matkul = el.matkul
+  let { matkul } = el
 
-  let cards = '' //variabel string untuk menampung template literal untuk masing-masing card berisi informasi kelas
-
-  // looping array kelas di masing-masing matkul
-  el.kelas.forEach((kls) => {
-
-    // mengisi variabel cards dengan template literal
-    cards += `
+  //variabel string untuk menampung template literal untuk masing-masing card berisi informasi kelas
+  let cards = el.kelas.map(kls =>
+    `
     <div class="col-6 col-md-3 col-lg-3">
     <div class="card">
       <div class="card-body text-center">
@@ -69,7 +65,7 @@ data.forEach((el) => {
     </div>
   </div>
     `
-  })
+  ).join('')
 
   // menyusun cards pada section dan mengisi variabel section
   // mengolah judul masing-masing matkul untuk dijadikan id section dan href pada link navigasi
@@ -87,8 +83,6 @@ data.forEach((el) => {
 
 // mengisi elemen main
 main.innerHTML = section
-
-
 
 // melengkapi link pada navbar
 const nav = document.querySelector('.navbar .navbar-nav') //kontrol elemen div.navbar-nav dari DOM
