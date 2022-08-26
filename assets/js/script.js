@@ -8,7 +8,6 @@ fetch('assets/json/data_matkul.json').then((response) => {
 // fungsi untuk membuat section
 function create_sections(data) {
   const main = document.querySelector('main') //kontrol elemen main dari DOM
-  const progressbar = document.querySelector('.progress-bar') //kontrol elemen .progress-bar dari DOM
   let section = '' //variabel string untuk menampung template literal untuk masing-masing section
 
   // looping array data
@@ -44,7 +43,8 @@ function create_sections(data) {
  </section>
    `
     // animasi loading
-    progressbar.style.width = ((i + 1) / data.length * 100) + '%'
+    document.querySelector('.progress-bar').style.width = ((i + 1) / data.length * 100) + '%'
+    document.querySelector('.splash p span').innerHTML = `(${i + 1}/${data.length})`
 
   })
 
