@@ -5,6 +5,7 @@ fetch('assets/json/data_matkul.json').then((response) => {
   })
 });
 
+// fungsi untuk membuat section
 function create_sections(data) {
   const main = document.querySelector('main') //kontrol elemen main dari DOM
   let section = '' //variabel string untuk menampung template literal untuk masing-masing section
