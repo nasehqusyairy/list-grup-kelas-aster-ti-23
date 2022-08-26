@@ -5,16 +5,6 @@ fetch('assets/json/data_matkul.json').then((response) => {
   })
 });
 
-// Ambil data dari file links.json kemudian distribusikan link whatsapp
-fetch('assets/json/links.json').then((response) => {
-  return response.json().then((data) => {
-    // distribusi link whatsapp
-    document.querySelectorAll('.join-grup').forEach((e, i) => {
-      e.attributes.href.value = 'https://chat.whatsapp.com/' + data[i]
-    })
-  })
-});
-
 function create_sections(data) {
   const main = document.querySelector('main') //kontrol elemen main dari DOM
   let section = '' //variabel string untuk menampung template literal untuk masing-masing section
@@ -56,7 +46,17 @@ function create_sections(data) {
   // mengisi elemen main
   main.innerHTML = section
 
-  // melengkapi link pada navbar
+  // Ambil data dari file links.json kemudian distribusikan link whatsapp
+  fetch('assets/json/links.json').then((response) => {
+    return response.json().then((data) => {
+      // distribusi link whatsapp
+      document.querySelectorAll('.join-grup').forEach((e, i) => {
+        e.attributes.href.value = 'https://chat.whatsapp.com/' + data[i]
+      })
+    })
+  });
+
+  // melengkapi link navigasi pada navbar
   const nav = document.querySelector('.navbar .navbar-nav') //kontrol elemen div.navbar-nav dari DOM
 
   // membuat array berisi template literal untuk elemen .nav-link dari array links kemudian disambungkan menjadi satu string menggunakan method join()
