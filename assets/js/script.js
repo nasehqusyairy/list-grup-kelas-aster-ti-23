@@ -57,7 +57,7 @@ data.forEach((el) => {
     <div class="col-6 col-md-3 col-lg-3">
     <div class="card">
       <div class="card-body text-center">
-        <h5 class="card-title">Kelas ${kls}</h5>
+        <h5 class="card-title text-primary">Kelas ${kls}</h5>
         <div class="d-grid gap-2">
           <a href="#" target="_blank" class="btn btn-primary text-white join-grup">Gabung</a>
         </div>
